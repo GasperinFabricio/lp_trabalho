@@ -13,4 +13,7 @@ text = file.read()
 tokenManip = tokenManipulator.TokenManipulator
 specialToken = specialTokenManipulator.SpecialTokenManipulator
 
-print(tokenManip.calculateLIWC(specialToken.cleanerParser() ) )
+tokenManip.calculateLIWC(specialToken.cleanerParser(text))
+
+
+print(tokenManip.pontuacao())

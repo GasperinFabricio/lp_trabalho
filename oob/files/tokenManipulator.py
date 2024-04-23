@@ -1,4 +1,4 @@
-import liwc from C:\Users\orko\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages'
+import liwc
 
 parse, category_names = liwc.load_token_parser("../LIWC2007_Portugues_win.dic")
 
@@ -34,6 +34,9 @@ class TokenManipulator:
     def setSwear(self, newSwear):
         self.swear = newSwear
 
+    def pontuacao(self):
+        lista = [self.swear, self.posemo, self.negemo, self.anx]
+        return lista
     def calculateLIWC(self, text):
         tokens = text
 
